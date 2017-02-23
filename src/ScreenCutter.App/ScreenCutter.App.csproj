@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
@@ -104,6 +105,9 @@
     <Resource Include="Images\ic_keyboard_arrow_left_black_18dp_1x.png" />
     <Resource Include="Images\ic_keyboard_arrow_right_black_18dp_1x.png" />
     <Resource Include="Images\ic_keyboard_arrow_up_black_18dp_1x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

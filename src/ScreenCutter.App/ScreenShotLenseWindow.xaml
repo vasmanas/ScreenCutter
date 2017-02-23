@@ -16,59 +16,59 @@
         MouseLeftButtonUp="Window_MouseLeftButtonUp">
     <Canvas Background="Transparent">
         <Border Name="shotArea" BorderBrush="Black" BorderThickness="1" Width="100" Height="100" Background="Transparent">
-            <Grid Name="menuArea" Width="90" Height="90" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Visibility="Collapsed">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Button Width="30" Height="30" Margin="0" Grid.Column="1" Grid.Row="0" MouseUp="VerticalButton_MouseUp">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Image Source="Images\ic_keyboard_arrow_up_black_18dp_1x.png" Grid.Row="0"></Image>
-                        <Image Source="Images\ic_keyboard_arrow_down_black_18dp_1x.png" Grid.Row="1"></Image>
-                    </Grid>
-                </Button>
-                <Button Width="30" Height="30" Margin="0" Grid.Column="0" Grid.Row="1" MouseUp="HorizontalButton_MouseUp">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Images\ic_keyboard_arrow_left_black_18dp_1x.png" Grid.Column="0"></Image>
-                        <Image Source="Images\ic_keyboard_arrow_right_black_18dp_1x.png" Grid.Column="1"></Image>
-                    </Grid>
-                </Button>
-                <Button Width="30" Height="30" Margin="0" Grid.Column="2" Grid.Row="1" MouseUp="AllWaysButton_MouseUp">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Image Source="Images\ic_keyboard_arrow_up_black_18dp_1x.png" Grid.Row="0" Grid.Column="1"></Image>
-                        <Image Source="Images\ic_keyboard_arrow_down_black_18dp_1x.png" Grid.Row="2" Grid.Column="1"></Image>
-                        <Image Source="Images\ic_keyboard_arrow_left_black_18dp_1x.png" Grid.Row="1" Grid.Column="0"></Image>
-                        <Image Source="Images\ic_keyboard_arrow_right_black_18dp_1x.png" Grid.Row="1" Grid.Column="2"></Image>
-                    </Grid>
-                </Button>
-                <Button Width="30" Height="30" Grid.Column="1" Grid.Row="2" MouseUp="Close_MouseUp">
-                    <Image Source="Images\ic_close_black_18dp_1x.png"></Image>
-                </Button>
-            </Grid>
         </Border>
+        <Grid Name="menuArea" Width="90" Height="90" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Transparent" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Width="30" Height="30" Margin="0" Grid.Column="1" Grid.Row="0" MouseUp="VerticalButton_MouseUp">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image Source="Images\ic_keyboard_arrow_up_black_18dp_1x.png" Grid.Row="0"></Image>
+                    <Image Source="Images\ic_keyboard_arrow_down_black_18dp_1x.png" Grid.Row="1"></Image>
+                </Grid>
+            </Button>
+            <Button Width="30" Height="30" Margin="0" Grid.Column="0" Grid.Row="1" MouseUp="HorizontalButton_MouseUp">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Images\ic_keyboard_arrow_left_black_18dp_1x.png" Grid.Column="0"></Image>
+                    <Image Source="Images\ic_keyboard_arrow_right_black_18dp_1x.png" Grid.Column="1"></Image>
+                </Grid>
+            </Button>
+            <Button Width="30" Height="30" Margin="0" Grid.Column="2" Grid.Row="1" MouseUp="AllWaysButton_MouseUp">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="Images\ic_keyboard_arrow_up_black_18dp_1x.png" Grid.Row="0" Grid.Column="1"></Image>
+                    <Image Source="Images\ic_keyboard_arrow_down_black_18dp_1x.png" Grid.Row="2" Grid.Column="1"></Image>
+                    <Image Source="Images\ic_keyboard_arrow_left_black_18dp_1x.png" Grid.Row="1" Grid.Column="0"></Image>
+                    <Image Source="Images\ic_keyboard_arrow_right_black_18dp_1x.png" Grid.Row="1" Grid.Column="2"></Image>
+                </Grid>
+            </Button>
+            <Button Width="30" Height="30" Grid.Column="1" Grid.Row="2" MouseUp="Close_MouseUp">
+                <Image Source="Images\ic_close_black_18dp_1x.png"></Image>
+            </Button>
+        </Grid>
     </Canvas>
 </Window>

@@ -23,6 +23,9 @@ namespace ScreenCutter.App
     {
         private Point rightDown;
 
+        // 1. Padaryti issaugojimo pluginu mechanizma, ir plugina guid+mass save
+        // 2. Praplecian rodytu width x height, kad butu aiskus pikseliu skaicius
+
         public ScreenShotLenseWindow()
         {
             InitializeComponent();
@@ -39,13 +42,17 @@ namespace ScreenCutter.App
 
         private void Window_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.rightDown = this.PointToScreen(e.GetPosition(this));
+            var mousePos = e.GetPosition(this);
+            this.rightDown = this.PointToScreen(mousePos);
 
             this.MouseMove -= Window_MouseMove;
             this.MouseWheel -= Window_MouseWheel;
             this.MouseLeftButtonUp -= Window_MouseLeftButtonUp;
 
             this.Cursor = null;
+            
+            this.menuArea.SetValue(Canvas.LeftProperty, mousePos.X - (this.menuArea.Width / 2));
+            this.menuArea.SetValue(Canvas.TopProperty, mousePos.Y - (this.menuArea.Height / 2));
 
             this.menuArea.Visibility = Visibility.Visible;
         }
@@ -73,7 +80,7 @@ namespace ScreenCutter.App
 
         private void Window_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-            this.ChangeSize(e.Delta / -12);
+            this.ChangeSize(Properties.Settings.Default.MouseWheelStepIsPixelCount * e.Delta / -120);
         }
 
         private void Window_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
