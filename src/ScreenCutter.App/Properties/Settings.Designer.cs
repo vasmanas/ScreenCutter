@@ -31,5 +31,17 @@ namespace ScreenCutter.App.Properties {
                 return ((ushort)(this["MouseWheelStepIsPixelCount"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ScreenCutter.FastSavePlugin.FastSavePlugin")]
+        public string SaveScreenAreaPluginFullName {
+            get {
+                return ((string)(this["SaveScreenAreaPluginFullName"]));
+            }
+            set {
+                this["SaveScreenAreaPluginFullName"] = value;
+            }
+        }
     }
 }

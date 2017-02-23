@@ -106,8 +106,12 @@
     <Resource Include="Images\ic_keyboard_arrow_right_black_18dp_1x.png" />
     <Resource Include="Images\ic_keyboard_arrow_up_black_18dp_1x.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Configuration\" />
+    <ProjectReference Include="..\ScreenCutter.PluginContract\ScreenCutter.PluginContract.csproj">
+      <Project>{ac29fb86-b99e-4a56-bf82-311ce17f17f2}</Project>
+      <Name>ScreenCutter.PluginContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

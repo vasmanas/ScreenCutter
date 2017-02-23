@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ScreenCutter.App.Native;
+using ScreenCutter.PluginContract;
 
 namespace ScreenCutter.App
 {
@@ -85,28 +86,12 @@ namespace ScreenCutter.App
 
         private void Window_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            //this.Hide();
-            //try
-            //{
-            //    System.Threading.Thread.Sleep(300);
+            var position = this.shotArea.PointToScreen(new Point(1d, 1d));
+            var screenshot = this.TakeScreenshot((int)position.X, (int)position.Y, (int)this.shotArea.ActualWidth - 2, (int)this.shotArea.ActualHeight - 2);
+            
+            var plugin = Plugins.Get<ISaveScreenAreaPlugin>(Properties.Settings.Default.SaveScreenAreaPluginFullName);
 
-                var position = this.shotArea.PointToScreen(new System.Windows.Point(1d, 1d));
-                var screenshot = this.TakeScreenshot((int)position.X, (int)position.Y, (int)this.shotArea.ActualWidth - 2, (int)this.shotArea.ActualHeight - 2);
-
-                var fileDialog = new Microsoft.Win32.SaveFileDialog();
-
-                fileDialog.DefaultExt = ".bmp";
-                fileDialog.Filter = "BMP Files (*.bmp)|*.bmp|JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
-
-                if (fileDialog.ShowDialog() == true)
-                {
-                    screenshot.Save(fileDialog.FileName);
-                }
-            //}
-            //finally
-            //{
-            //    this.Show();
-            //}
+            plugin.Save(screenshot);
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)

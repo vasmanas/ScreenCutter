@@ -9,6 +9,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{BDC9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCutter.App", "src\ScreenCutter.App\ScreenCutter.App.csproj", "{5D134B8C-F26B-4D08-ADDF-B5E85FBA6436}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCutter.PluginContract", "src\ScreenCutter.PluginContract\ScreenCutter.PluginContract.csproj", "{AC29FB86-B99E-4A56-BF82-311CE17F17F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plugins", "plugins", "{B5B89C07-9204-4F21-BBC3-328359D4273E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCutter.SaveFileDialogPlugin", "src\plugins\ScreenCutter.SaveFileDialogPlugin\ScreenCutter.SaveFileDialogPlugin.csproj", "{E9E2E733-8401-485B-AAFD-4ED12C6FF7C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCutter.FastSavePlugin", "src\plugins\ScreenCutter.FastSavePlugin\ScreenCutter.FastSavePlugin.csproj", "{FCFB03AE-FDD1-461F-8C3B-834E963CD872}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +27,27 @@ Global
 		{5D134B8C-F26B-4D08-ADDF-B5E85FBA6436}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D134B8C-F26B-4D08-ADDF-B5E85FBA6436}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D134B8C-F26B-4D08-ADDF-B5E85FBA6436}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC29FB86-B99E-4A56-BF82-311CE17F17F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC29FB86-B99E-4A56-BF82-311CE17F17F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC29FB86-B99E-4A56-BF82-311CE17F17F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC29FB86-B99E-4A56-BF82-311CE17F17F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E2E733-8401-485B-AAFD-4ED12C6FF7C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E2E733-8401-485B-AAFD-4ED12C6FF7C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E2E733-8401-485B-AAFD-4ED12C6FF7C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E2E733-8401-485B-AAFD-4ED12C6FF7C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCFB03AE-FDD1-461F-8C3B-834E963CD872}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCFB03AE-FDD1-461F-8C3B-834E963CD872}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCFB03AE-FDD1-461F-8C3B-834E963CD872}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCFB03AE-FDD1-461F-8C3B-834E963CD872}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5D134B8C-F26B-4D08-ADDF-B5E85FBA6436} = {A4E88F70-92CB-4196-BD44-63347BCFBE49}
+		{AC29FB86-B99E-4A56-BF82-311CE17F17F2} = {A4E88F70-92CB-4196-BD44-63347BCFBE49}
+		{B5B89C07-9204-4F21-BBC3-328359D4273E} = {A4E88F70-92CB-4196-BD44-63347BCFBE49}
+		{E9E2E733-8401-485B-AAFD-4ED12C6FF7C1} = {B5B89C07-9204-4F21-BBC3-328359D4273E}
+		{FCFB03AE-FDD1-461F-8C3B-834E963CD872} = {B5B89C07-9204-4F21-BBC3-328359D4273E}
 	EndGlobalSection
 EndGlobal

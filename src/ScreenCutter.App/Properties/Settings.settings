@@ -5,5 +5,8 @@
     <Setting Name="MouseWheelStepIsPixelCount" Type="System.UInt16" Scope="Application">
       <Value Profile="(Default)">10</Value>
     </Setting>
+    <Setting Name="SaveScreenAreaPluginFullName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ScreenCutter.FastSavePlugin.FastSavePlugin</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
