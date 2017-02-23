@@ -23,9 +23,8 @@ namespace ScreenCutter.App
     public partial class ScreenShotLenseWindow : Window
     {
         private Point rightDown;
-
-        // 1. Padaryti issaugojimo pluginu mechanizma, ir plugina guid+mass save
-        // 2. Praplecian rodytu width x height, kad butu aiskus pikseliu skaicius
+        
+        // TODO: Praplecian rodytu width x height, kad butu aiskus pikseliu skaicius
 
         public ScreenShotLenseWindow()
         {
