@@ -90,7 +90,22 @@ namespace ScreenCutter.App
             
             var plugin = Plugins.Get<ISaveScreenAreaPlugin>(Properties.Settings.Default.SaveScreenAreaPluginFullName);
 
-            plugin.Save(screenshot);
+            if (plugin == null)
+            {
+                var fileDialog = new Microsoft.Win32.SaveFileDialog();
+
+                fileDialog.DefaultExt = ".bmp";
+                fileDialog.Filter = "BMP Files (*.bmp)|*.bmp|JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+
+                if (fileDialog.ShowDialog() == true)
+                {
+                    screenshot.Save(fileDialog.FileName);
+                }
+            }
+            else
+            {
+                plugin.Save(screenshot);
+            }
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
