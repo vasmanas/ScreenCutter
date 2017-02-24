@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using log4net;
 using ScreenCutter.App.Native;
 using ScreenCutter.PluginContract;
 
@@ -22,10 +23,11 @@ namespace ScreenCutter.App
     /// </summary>
     public partial class ScreenShotLenseWindow : Window
     {
+        private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         private Point rightDown;
 
         // TODO: wrap into error catcher
-        // 1. Test greyscale
 
         public ScreenShotLenseWindow()
         {
