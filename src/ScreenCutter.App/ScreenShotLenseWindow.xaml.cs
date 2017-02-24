@@ -27,8 +27,6 @@ namespace ScreenCutter.App
 
         private Point rightDown;
 
-        // TODO: wrap into error catcher
-
         public ScreenShotLenseWindow()
         {
             InitializeComponent();
