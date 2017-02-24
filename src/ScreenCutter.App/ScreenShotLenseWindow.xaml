@@ -28,6 +28,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            <TextBlock Name="cropDimensionWidth" Width="30" Height="15" Margin="0" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center">30</TextBlock>
+            <TextBlock Name="cropDimensionHeight" Width="30" Height="15" Margin="0" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextAlignment="Center">30</TextBlock>
             <Button Width="30" Height="30" Margin="0" Grid.Column="1" Grid.Row="0" MouseUp="VerticalButton_MouseUp">
                 <Grid>
                     <Grid.RowDefinitions>

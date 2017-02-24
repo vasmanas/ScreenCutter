@@ -23,8 +23,9 @@ namespace ScreenCutter.App
     public partial class ScreenShotLenseWindow : Window
     {
         private Point rightDown;
-        
-        // TODO: Praplecian rodytu width x height, kad butu aiskus pikseliu skaicius
+
+        // TODO: wrap into error catcher
+        // 1. Test greyscale
 
         public ScreenShotLenseWindow()
         {
@@ -48,6 +49,9 @@ namespace ScreenCutter.App
             this.MouseMove -= Window_MouseMove;
             this.MouseWheel -= Window_MouseWheel;
             this.MouseLeftButtonUp -= Window_MouseLeftButtonUp;
+
+            this.cropDimensionWidth.Text = (this.shotArea.ActualWidth - 2).ToString();
+            this.cropDimensionHeight.Text = (this.shotArea.ActualHeight - 2).ToString();
 
             this.Cursor = null;
             

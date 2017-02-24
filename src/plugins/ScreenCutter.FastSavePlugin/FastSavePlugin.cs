@@ -14,7 +14,7 @@ namespace ScreenCutter.FastSavePlugin
 
         public string DirPath { get; set; }
 
-        public void Save(Bitmap screenArea)
+        public virtual void Save(Bitmap screenArea)
         {
             if (!Directory.Exists(this.DirPath))
             {

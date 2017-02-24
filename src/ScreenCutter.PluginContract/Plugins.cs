@@ -31,8 +31,7 @@ namespace ScreenCutter.PluginContract
             {
                 throw new ArgumentException("Type must be interface", "T");
             }
-
-            IPlugin result = null;
+            
             foreach (var plugin in Plugins.plugins)
             {
                 var pluginType = plugin.GetType();
