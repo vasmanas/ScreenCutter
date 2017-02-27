@@ -26,7 +26,7 @@ namespace ScreenCutter.App
         private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private Point rightDown;
-
+        
         public ScreenShotLenseWindow()
         {
             InitializeComponent();
@@ -158,13 +158,13 @@ namespace ScreenCutter.App
 
                 case Key.Add:
                     {
-                        this.ChangeSize(2);
+                        this.ChangeSize(1);
                         break;
                     }
 
                 case Key.Subtract:
                     {
-                        this.ChangeSize(-2);
+                        this.ChangeSize(-1);
                         break;
                     }
             }
