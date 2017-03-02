@@ -9,13 +9,20 @@ namespace ScreenCutter.FastSavePlugin
 
         private IImageFilter removeBordersFilter = new RemoveBordersFilter();
 
+        private IImageCleaver singleColorVerticalCleaver = new SingleColorVerticalCleaver();
+
         public override void Save(Bitmap screenArea)
         {
             var greyscale = this.grayscaleFilter.Filter(screenArea);
 
-            var borderless = this.removeBordersFilter.Filter(greyscale);
+            var parts = this.singleColorVerticalCleaver.Cleave(greyscale);
 
-            base.Save(borderless);
+            foreach (var part in parts)
+            {
+                var borderless = this.removeBordersFilter.Filter(part);
+
+                base.Save(borderless);
+            }
         }
     }
 }
