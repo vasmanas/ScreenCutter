@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="FastSavePlugin.cs" />
     <Compile Include="GrayscaleFilter.cs" />
+    <Compile Include="NegativeImageFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveBordersFilter.cs" />
     <Compile Include="SaveAsGrayscalePlugin.cs" />
