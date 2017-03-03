@@ -91,10 +91,7 @@ namespace ScreenCutter.App
         {
             var position = this.shotArea.PointToScreen(new Point(1d, 1d));
             var screenshot = this.TakeScreenshot((int)position.X, (int)position.Y, (int)this.shotArea.ActualWidth - 2, (int)this.shotArea.ActualHeight - 2);
-
-            //var filter = new NegativeImageFilter();
-            //screenshot = filter.Filter(screenshot);
-
+            
             var plugin = Plugins.Get<ISaveScreenAreaPlugin>(Properties.Settings.Default.SaveScreenAreaPluginFullName);
 
             if (plugin == null)
